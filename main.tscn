@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://dafu2v2160x0m"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_44xmq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yp4hw"]
+bg_color = Color(0.467695, 0.264126, 0.754045, 1)
+
+[sub_resource type="Theme" id="Theme_i46jj"]
+Button/font_sizes/font_size = 80
+Button/styles/normal = SubResource("StyleBoxFlat_yp4hw")
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_44xmq")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -334.5
+offset_top = -71.0
+offset_right = 334.5
+offset_bottom = 71.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_i46jj")
+text = "Click Me!"
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
